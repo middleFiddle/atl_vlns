@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -124,7 +125,19 @@ export default function Home() {
               data-bs-parent="#main"
             >
               <p className="accordion-body">
-                Find in-depth information about Next.js features and API.
+                <p>
+                  Our rental program provides you a flexible and sensible path
+                  towards ownership while saving you money on regular
+                  maintenance and repairs.
+                </p>
+
+                <p>
+                  {`Learn more about `}
+                  <Link href="/Rentals/Rentals">
+                    <a>how our program works</a>
+                  </Link>
+                  .
+                </p>
               </p>
             </div>
           </div>
@@ -149,7 +162,12 @@ export default function Home() {
               data-bs-parent="#main"
             >
               <p className="accordion-body">
-                Find in-depth information about Next.js features and API.
+                <p>
+                  We carry violins, violas, cellos, double basses, and bows from
+                  around the world across a wide range of prices.
+                </p>
+                <p>Check out our Gallery, read our Buyer's Guide, or</p>
+                <p>Make an appointment</p>
               </p>
             </div>
           </div>
@@ -174,7 +192,14 @@ export default function Home() {
               data-bs-parent="#main"
             >
               <p className="accordion-body">
-                Find in-depth information about Next.js features and API.
+                <p>
+                  Our luthiers are not only masters of their craft, they value
+                  the time, the budget, and the input of our customers. Whether
+                  you need routine maintenance, tonal adjustments, or support
+                  through a 'worst-case' scenario we always provide outstanding
+                  service and take your needs into account.
+                </p>
+                <p>Make an appointment</p>
               </p>
             </div>
           </div>
@@ -199,7 +224,13 @@ export default function Home() {
               data-bs-parent="#main"
             >
               <p className="accordion-body">
-                Find in-depth information about Next.js features and API.
+                <p>
+                  Atlanta Violins has been serving the greater Atlanta community
+                  from our little shop in Roswell for over 25 years. Generations
+                  of orchestra students from across the region have started with
+                  our rental program.
+                </p>
+                <p>Read more about our team here.</p>
               </p>
             </div>
           </div>
@@ -223,8 +254,20 @@ export default function Home() {
               aria-labelledby="headingFive"
               data-bs-parent="#main"
             >
-              <p className="accordion-body">
-                Find in-depth information about Next.js features and API.
+              <p className="accordion-body ">
+                <p>
+                  We are located on Atlanta St. (Route 8) just north of the
+                  Chattahoochee River and south of the Roswell Mill.
+                </p>
+                <div className="container d-flex flex-column align-items-center ">
+                  <Image
+                    className="mx-auto"
+                    src="/map.png"
+                    width={217}
+                    height={151}
+                    alt="an beautiful watercolor map by Matt Phillips, links to Google Maps"
+                  />
+                </div>
               </p>
             </div>
           </div>
