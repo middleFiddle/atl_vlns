@@ -102,7 +102,12 @@ export default function Home() {
       <main className="container d-flex flex-column justify-content-center fluid bg-light">
         <h1 className="text-center">Welcome to Our Shop!</h1>
         <div className="container fluid d-flex justify-content-center">
-          <Image src="/theShop.png" width={431} height={233} />
+          <Image
+            src="/theShop.png"
+            width={431}
+            height={233}
+            alt="beautiful watercolor of our little old shop"
+          />
         </div>
         <div className="accordion" id="main">
           <div className="accordion-item">
