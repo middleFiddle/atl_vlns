@@ -171,7 +171,7 @@ export default function Home() {
                   We carry violins, violas, cellos, double basses, and bows from
                   around the world across a wide range of prices.
                 </p>
-                <p>Check out our Gallery, read our Buyer's Guide, or</p>
+                <p>{`Check out our Gallery, read our Buyer's Guide, or`}</p>
                 <p>Make an appointment</p>
               </p>
             </div>
@@ -198,11 +198,11 @@ export default function Home() {
             >
               <p className="accordion-body">
                 <p>
-                  Our luthiers are not only masters of their craft, they value
+                  {`Our luthiers are not only masters of their craft, they value
                   the time, the budget, and the input of our customers. Whether
                   you need routine maintenance, tonal adjustments, or support
                   through a 'worst-case' scenario we always provide outstanding
-                  service and take your needs into account.
+                  service and take your needs into account.`}
                 </p>
                 <p>Make an appointment</p>
               </p>
