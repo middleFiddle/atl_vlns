@@ -28,8 +28,8 @@ const Accordion = ({ accordion }) => {
             {accordion[0].body}
             <p>
               {`Learn more about `}
-              <Link href="/rentals/Rentals">
-                <a>how our program works</a>
+              <Link href={accordion[0].linkRef}>
+                <a>{accordion[0].linkTxt}</a>
               </Link>
               .
             </p>

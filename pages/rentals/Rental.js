@@ -2,7 +2,9 @@ import React from 'react'
 
 import Info from './Info.mdx'
 
-const Rentals = () => {
+const mdxReader = (mdx) => mdx().props.children.props.children
+
+const Rental = () => {
   return (
     <div className="text-dark container bg-secondary">
       <Info />
@@ -10,4 +12,4 @@ const Rentals = () => {
   )
 }
 
-export default Rentals
+export default Rental
