@@ -52,7 +52,7 @@ const Rental = () => {
       <Navbar />
       <main className="container d-flex flex-column justify-content-center fluid bg-light">
         <Banner title="Our Rental Program" />
-        <Accordion accordion={accordion} />
+        <Accordion id="accordion" accordion={accordion} />
       </main>
 
       <footer></footer>
