@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -26,26 +27,34 @@ const Navbar = () => {
                     </tr>
                     <tr className="table-success">
                       <th scope="row">Tuesday</th>
-                      <td>11a-6p</td>
+                      <td>
+                        11a-<em>6p</em>
+                      </td>
                     </tr>
                     <tr className="table-success">
                       <th scope="row">Wednesday</th>
-                      <td>11a-6p</td>
+                      <td>
+                        11a-<em>6p</em>
+                      </td>
                     </tr>
                     <tr className="table-success">
                       <th scope="row">Thursday</th>
-                      <td>11a-6p</td>
+                      <td>
+                        11a-<em>6p</em>
+                      </td>
                     </tr>
                     <tr className="table-info">
                       <th scope="row">Friday</th>
                       <td>
-                        11a-<strong>5p</strong>
+                        11a-
+                        <strong>5p</strong>
                       </td>
                     </tr>
                     <tr className="table-warning">
                       <th scope="row">Saturday</th>
                       <td>
-                        11a-<strong>3p</strong>
+                        11a-
+                        <strong>3p</strong>
                       </td>
                     </tr>
                     <tr className="table-danger">
@@ -57,17 +66,20 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <a
-            className="navbar-brand d-flex justify-content-center mx-auto"
-            href="#"
-          >
-            <Image
-              src="/logo.png"
-              width={155}
-              height={74}
-              alt="Atlanta Violins Logo"
-            />
-          </a>
+
+          <Link href="/">
+            <a
+              className="navbar-brand d-flex justify-content-center mx-auto"
+              href="/"
+            >
+              <Image
+                src="/logo.png"
+                width={155}
+                height={74}
+                alt="Atlanta Violins Logo"
+              />
+            </a>
+          </Link>
           <div className="w-25 dropdown d-flex justify-content-center">
             <button
               className="btn-sm btn-outline-dark dropdown-toggle"
@@ -84,9 +96,15 @@ const Navbar = () => {
               className="dropdown-menu"
               aria-labelledby="dropdownMenuButton2"
             >
-              <div className="dropdown-item">Call</div>
-              <div className="dropdown-item">Text</div>
-              <div className="dropdown-item">Email</div>
+              <button className="dropdown-item">
+                <a href="tel:7706428111">Call</a>
+              </button>
+              <button className="dropdown-item">
+                <a href="sms:7707389682">Text</a>
+              </button>
+              <button className="dropdown-item">
+                <a href="mailto:info@atlantaviolins.com">Email</a>
+              </button>
             </div>
           </div>
         </div>
