@@ -38,7 +38,7 @@ const Accordion = ({ accordion }) => {
   ))
 
   return (
-    <div className="accordion" id="main">
+    <div key={firstItem.key} className="accordion" id="main">
       <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
           <button
@@ -58,7 +58,7 @@ const Accordion = ({ accordion }) => {
           aria-labelledby="headingOne"
           data-bs-parent="#main"
         >
-          <section id="Rentals" className="accordion-body">
+          <section id={firstItem.id} className="accordion-body">
             <div>{firstItem.body}</div>
             <div>
               {firstItem.prompt}
