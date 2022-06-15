@@ -68,10 +68,7 @@ const Navbar = () => {
           </div>
 
           <Link href="/">
-            <a
-              className="navbar-brand d-flex justify-content-center mx-auto"
-              href="/"
-            >
+            <a className="navbar-brand d-flex justify-content-center mx-auto">
               <Image
                 src="/logo.png"
                 width={155}
