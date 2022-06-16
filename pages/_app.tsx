@@ -1,9 +1,10 @@
 import '../styles/styles.scss'
 import React, { useEffect } from 'react'
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    import('bootstrap/dist/js/bootstrap')
+    import('bootstrap')
   }, [])
 
   return <Component {...pageProps} />

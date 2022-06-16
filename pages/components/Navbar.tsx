@@ -68,16 +68,16 @@ const Navbar = () => {
           </div>
 
           <Link href="/">
-            <a className="navbar-brand d-flex justify-content-center mx-auto">
+            <a className="navbar-brand d-inline-flex justify-content-center mx-auto w-25">
               <Image
                 src="/logo.png"
-                width={155}
-                height={74}
+                width={311}
+                height={129}
                 alt="Atlanta Violins Logo"
               />
             </a>
           </Link>
-          <div className="w-25 dropdown d-flex justify-content-center">
+          <div className=" dropdown d-flex justify-content-center">
             <button
               className="btn-sm btn-outline-dark dropdown-toggle"
               type="button"

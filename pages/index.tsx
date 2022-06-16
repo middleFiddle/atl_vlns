@@ -9,24 +9,15 @@ import Workshop from './home/workshop.mdx'
 import Story from './home/story.mdx'
 import Directions from './home/directions.mdx'
 import { nanoid } from 'nanoid'
+import { Url } from 'url'
 
 export default function Home() {
-  interface Section {
-    header: string
-    prompt: string
-    linkRef: string
-    linkTxt: string
-    bs: string
-    id: string
-  }
-  const accordion: [Section, Section, Section, Section, Section] = [
+  const accordion = [
     {
       header: 'Our Rental Program',
-
       prompt: `Learn more about `,
       linkRef: '/rentals/Rental',
       linkTxt: 'how our program works',
-
       bs: 'One',
       id: 'Rentals',
     },
@@ -53,7 +44,7 @@ export default function Home() {
     {
       header: 'Who We Are',
 
-      prompt: `Read more about our team here. `,
+      prompt: `Read more about our team `,
       linkRef: '/story/Story',
       linkTxt: 'here',
 

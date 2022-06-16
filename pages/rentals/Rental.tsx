@@ -1,44 +1,36 @@
 import Head from 'next/head'
 
+import CallToAction from '../components/CallToAction'
 import Accordion from '../components/Accordion'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
 import How from './how.mdx'
 import Why from './why.mdx'
 import For from './for.mdx'
-import { nanoid } from 'nanoid'
 
 const Rental = () => {
-  interface Section {
-    header: string
-    prompt: string
-    linkRef: string
-    linkTxt: string
-    bs: string
-    id: string
-  }
-  const accordion: [Section, Section, Section] = [
+  const accordion = [
     {
       header: 'How It Works',
-      prompt: ``,
-      linkRef: '',
-      linkTxt: '',
+      prompt: `yo`,
+      linkRef: '#',
+      linkTxt: 'link',
       bs: 'One',
       id: 'How',
     },
     {
       header: 'Why Renting is in Your Best Interest',
-      prompt: '',
-      linkRef: '',
-      linkTxt: '',
+      prompt: 'yo',
+      linkRef: '#',
+      linkTxt: 'link',
       bs: 'Two',
       id: 'Why',
     },
     {
       header: 'Our Program Grows With You',
-      prompt: '',
-      linkRef: '',
-      linkTxt: '',
+      prompt: 'yo',
+      linkRef: '#',
+      linkTxt: 'link',
       bs: 'Three',
       id: 'For',
     },
@@ -54,6 +46,10 @@ const Rental = () => {
       <Navbar />
       <main className="container d-flex flex-column justify-content-center fluid bg-light">
         <Banner title="Our Rental Program" />
+        <CallToAction
+          txt="Start a Rental!"
+          href="https://online.atlantaviolins.com/aerntschoolselect.aspx"
+        ></CallToAction>
         <Accordion accordion={accordion}>
           <How />
           <Why />
