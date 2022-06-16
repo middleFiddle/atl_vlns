@@ -4,3 +4,12 @@
   right: 0 !important;
   left: auto !important;
 }
+
+.sub > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.sub > summary:hover {
+  background-color: cadetblue;
+}

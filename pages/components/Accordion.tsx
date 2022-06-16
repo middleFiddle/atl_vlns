@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Children } from 'react'
 import Link from 'next/link'
 
-const Accordion = ({ accordion }) => {
+const Accordion = ({ accordion, children }) => {
   const [firstItem, ...otherItems] = accordion
-  const others = otherItems.map((i) => (
+  const others = otherItems.map((i, index) => (
     <div key={i.key} className="accordion-item">
       <h2 className="accordion-header" id={`heading${i.bs}`}>
         <button
@@ -24,7 +24,7 @@ const Accordion = ({ accordion }) => {
         data-bs-parent="#main"
       >
         <section id={i.id} className="accordion-body">
-          <div>{i.body}</div>
+          <div>{children[index + 1]}</div>
           <div>
             {i.prompt}
             <Link href={i.linkRef}>
@@ -58,7 +58,7 @@ const Accordion = ({ accordion }) => {
           data-bs-parent="#main"
         >
           <section id={firstItem.id} className="accordion-body">
-            <div>{firstItem.body}</div>
+            <div>{children[0]}</div>
             <div>
               {firstItem.prompt}
               <Link href={firstItem.linkRef}>

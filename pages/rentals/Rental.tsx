@@ -12,7 +12,6 @@ const Rental = () => {
   const accordion = [
     {
       header: 'How It Works',
-      body: How(),
       prompt: ``,
       linkRef: '',
       linkTxt: '',
@@ -22,7 +21,7 @@ const Rental = () => {
     },
     {
       header: 'Why Renting is in Your Best Interest',
-      body: Why(),
+
       prompt: '',
       linkRef: '',
       linkTxt: '',
@@ -32,7 +31,7 @@ const Rental = () => {
     },
     {
       header: 'Our Program Grows With You',
-      body: For(),
+
       prompt: '',
       linkRef: '',
       linkTxt: '',
@@ -52,7 +51,11 @@ const Rental = () => {
       <Navbar />
       <main className="container d-flex flex-column justify-content-center fluid bg-light">
         <Banner title="Our Rental Program" />
-        <Accordion id="accordion" accordion={accordion} />
+        <Accordion accordion={accordion}>
+          <How />
+          <Why />
+          <For />
+        </Accordion>
       </main>
 
       <footer></footer>

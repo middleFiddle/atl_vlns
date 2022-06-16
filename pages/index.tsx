@@ -14,7 +14,7 @@ export default function Home() {
   const accordion = [
     {
       header: 'Our Rental Program',
-      body: Rental(),
+
       prompt: `Learn more about `,
       linkRef: '/rentals/Rental',
       linkTxt: 'how our program works',
@@ -24,7 +24,7 @@ export default function Home() {
     },
     {
       header: 'The Sales Gallery',
-      body: Sales(),
+
       prompt: `Make an appointment to work with our on staff musicians `,
       linkRef: '/sales/Sale',
       linkTxt: 'to find your next instrument',
@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       header: 'Workshop',
-      body: Workshop(),
+
       prompt: `Make an appointment `,
       linkRef: '/workshop/Workshop',
       linkTxt: 'to see our luthiers',
@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       header: 'Who We Are',
-      body: Story(),
+
       prompt: `Read more about our team here. `,
       linkRef: '/story/Story',
       linkTxt: 'here',
@@ -54,7 +54,7 @@ export default function Home() {
     },
     {
       header: 'Directions',
-      body: Directions(),
+
       prompt: `Make an appointment `,
       linkRef: '/directions/Direction',
       linkTxt: 'to see our luthiers',
@@ -74,7 +74,13 @@ export default function Home() {
       <Navbar />
       <main className="container d-flex flex-column justify-content-center fluid bg-light">
         <Banner title="Welcome to Our Shop" />
-        <Accordion accordion={accordion} />
+        <Accordion accordion={accordion}>
+          <Rental />
+          <Sales />
+          <Workshop />
+          <Story />
+          <Directions />
+        </Accordion>
       </main>
 
       <footer></footer>
