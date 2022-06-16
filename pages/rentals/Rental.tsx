@@ -9,33 +9,36 @@ import For from './for.mdx'
 import { nanoid } from 'nanoid'
 
 const Rental = () => {
-  const accordion = [
+  interface Section {
+    header: string
+    prompt: string
+    linkRef: string
+    linkTxt: string
+    bs: string
+    id: string
+  }
+  const accordion: [Section, Section, Section] = [
     {
       header: 'How It Works',
       prompt: ``,
       linkRef: '',
       linkTxt: '',
-
       bs: 'One',
       id: 'How',
     },
     {
       header: 'Why Renting is in Your Best Interest',
-
       prompt: '',
       linkRef: '',
       linkTxt: '',
-
       bs: 'Two',
       id: 'Why',
     },
     {
       header: 'Our Program Grows With You',
-
       prompt: '',
       linkRef: '',
       linkTxt: '',
-
       bs: 'Three',
       id: 'For',
     },

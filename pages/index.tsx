@@ -11,7 +11,15 @@ import Directions from './home/directions.mdx'
 import { nanoid } from 'nanoid'
 
 export default function Home() {
-  const accordion = [
+  interface Section {
+    header: string
+    prompt: string
+    linkRef: string
+    linkTxt: string
+    bs: string
+    id: string
+  }
+  const accordion: [Section, Section, Section, Section, Section] = [
     {
       header: 'Our Rental Program',
 
