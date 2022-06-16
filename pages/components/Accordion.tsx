@@ -1,10 +1,11 @@
 import React, { Children } from 'react'
 import Link from 'next/link'
+import { nanoid } from 'nanoid'
 
 const Accordion = ({ accordion, children }) => {
   const [firstItem, ...otherItems] = accordion
   const others = otherItems.map((i, index) => (
-    <div key={i.key} className="accordion-item">
+    <div key={nanoid()} className="accordion-item">
       <h2 className="accordion-header" id={`heading${i.bs}`}>
         <button
           className="accordion-button"
@@ -37,7 +38,7 @@ const Accordion = ({ accordion, children }) => {
   ))
 
   return (
-    <div key={firstItem.key} className="accordion" id="main">
+    <div key={nanoid()} className="accordion" id="main">
       <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
           <button

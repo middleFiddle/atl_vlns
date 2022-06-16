@@ -18,7 +18,7 @@ export default function Home() {
       prompt: `Learn more about `,
       linkRef: '/rentals/Rental',
       linkTxt: 'how our program works',
-      key: nanoid(),
+
       bs: 'One',
       id: 'Rentals',
     },
@@ -28,7 +28,7 @@ export default function Home() {
       prompt: `Make an appointment to work with our on staff musicians `,
       linkRef: '/sales/Sale',
       linkTxt: 'to find your next instrument',
-      key: nanoid(),
+
       bs: 'Two',
       id: 'Sales',
     },
@@ -38,7 +38,7 @@ export default function Home() {
       prompt: `Make an appointment `,
       linkRef: '/workshop/Workshop',
       linkTxt: 'to see our luthiers',
-      key: nanoid(),
+
       bs: 'Three',
       id: 'Workshop',
     },
@@ -48,7 +48,7 @@ export default function Home() {
       prompt: `Read more about our team here. `,
       linkRef: '/story/Story',
       linkTxt: 'here',
-      key: nanoid(),
+
       bs: 'Four',
       id: 'Story',
     },
@@ -58,7 +58,7 @@ export default function Home() {
       prompt: `Make an appointment `,
       linkRef: '/directions/Direction',
       linkTxt: 'to see our luthiers',
-      key: nanoid(),
+
       bs: 'Five',
       id: 'Directions',
     },

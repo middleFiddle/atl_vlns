@@ -15,7 +15,7 @@ const Rental = () => {
       prompt: ``,
       linkRef: '',
       linkTxt: '',
-      key: nanoid(),
+
       bs: 'One',
       id: 'How',
     },
@@ -25,7 +25,7 @@ const Rental = () => {
       prompt: '',
       linkRef: '',
       linkTxt: '',
-      key: nanoid(),
+
       bs: 'Two',
       id: 'Why',
     },
@@ -35,7 +35,7 @@ const Rental = () => {
       prompt: '',
       linkRef: '',
       linkTxt: '',
-      key: nanoid(),
+
       bs: 'Three',
       id: 'For',
     },
