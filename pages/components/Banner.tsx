@@ -1,8 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import PropTypes, { InferProps } from 'prop-types'
+import { NextPage } from 'next'
 
-function Banner({ title }: InferProps<typeof Banner.propTypes>) {
+type Props = {
+  title: string
+}
+
+const Banner: NextPage<Props> = ({ title }) => {
   return (
     <div>
       <h1 className="text-center">{title}</h1>
@@ -16,10 +20,6 @@ function Banner({ title }: InferProps<typeof Banner.propTypes>) {
       </div>
     </div>
   )
-}
-
-Banner.propTypes = {
-  title: PropTypes.string,
 }
 
 export default Banner

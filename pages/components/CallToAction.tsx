@@ -1,21 +1,17 @@
 import React from 'react'
+import { NextPage } from 'next'
 
-import PropTypes, { InferProps } from 'prop-types'
+type Props = {
+  txt: string
+  href: string
+}
 
-function CallToAction({
-  txt,
-  href,
-}: InferProps<typeof CallToAction.propTypes>) {
+const CallToAction: NextPage<Props> = ({ txt, href }) => {
   return (
     <a className="btn btn-success mx-auto mb-5" href={href}>
       {txt}
     </a>
   )
-}
-
-CallToAction.propTypes = {
-  txt: PropTypes.string,
-  href: PropTypes.string.isRequired,
 }
 
 export default CallToAction

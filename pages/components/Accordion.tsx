@@ -1,13 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
 import { nanoid } from 'nanoid'
-import PropTypes, { InferType } from 'prop-types'
+import { NextPage } from 'next'
 import { Url } from 'url'
 
-function Accordion({
-  accordion,
-  children,
-}: InferType<typeof Accordion.propTypes>) {
+type Props = {
+  accordion: any[]
+  children: any[]
+}
+
+const Accordion: NextPage<Props> = ({ accordion, children }) => {
   interface Section {
     header: string | undefined
     prompt: string | undefined
@@ -86,11 +88,6 @@ function Accordion({
       {others}
     </div>
   )
-}
-
-Accordion.propTypes = {
-  accordion: PropTypes.arrayOf(PropTypes.object),
-  children: PropTypes.arrayOf(PropTypes.element),
 }
 
 export default Accordion
