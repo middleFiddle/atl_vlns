@@ -1,0 +1,43 @@
+{
+  "rental": {
+    "key": "1234",
+    "header": "Our Rental Program",
+    "prompt": "Learn more about ",
+    "linkRef": "/Rentals",
+    "linkTxt": "how our program works",
+    "bs": "One"
+  },
+
+  "sales": {
+    "key": "2234",
+    "header": "Sales",
+    "prompt": "Make an appointment to ",
+    "linkRef": "/Sales",
+    "linkTxt": "work with our musicians",
+    "bs": "Two"
+  },
+  "workshop": {
+    "key": "3234",
+    "header": "Why Renting is in Your Best Intererst",
+    "prompt": "Make an appointment with  ",
+    "linkRef": "/Workshop",
+    "linkTxt": "our luthiers",
+    "bs": "Three"
+  },
+  "story": {
+    "key": "3334",
+    "header": "Who We Are",
+    "prompt": "Read more about our ",
+    "linkRef": "/Story",
+    "linkTxt": "team",
+    "bs": "Four"
+  },
+  "directions": {
+    "key": "3244",
+    "header": "Directions",
+    "prompt": "Find us",
+    "linkRef": "/Directions",
+    "linkTxt": "here",
+    "bs": "Five"
+  }
+}

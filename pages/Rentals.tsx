@@ -1,41 +1,27 @@
 import Head from 'next/head'
-
+import { promises as fs } from 'fs'
+import path from 'path'
 import CallToAction from '../components/CallToAction'
 import Accordion from '../components/Accordion'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
-import How from './how.mdx'
-import Why from './why.mdx'
-import For from './for.mdx'
+import How from './rental-assets/how.mdx'
+import Why from './rental-assets/why.mdx'
+import For from './rental-assets/for.mdx'
 
-const Rental = () => {
-  const accordion = [
-    {
-      header: 'How It Works',
-      prompt: `yo`,
-      linkRef: '#',
-      linkTxt: 'link',
-      bs: 'One',
-      id: 'How',
-    },
-    {
-      header: 'Why Renting is in Your Best Interest',
-      prompt: 'yo',
-      linkRef: '#',
-      linkTxt: 'link',
-      bs: 'Two',
-      id: 'Why',
-    },
-    {
-      header: 'Our Program Grows With You',
-      prompt: 'yo',
-      linkRef: '#',
-      linkTxt: 'link',
-      bs: 'Three',
-      id: 'For',
-    },
-  ]
+export async function getStaticProps() {
+  const directory = path.join(process.cwd(), '/pages/rental-assets')
 
+  const filePath = path.join(directory, 'rentalData.json')
+  const accordion = await fs.readFile(filePath, 'utf8')
+  return {
+    props: {
+      accordion,
+    },
+  }
+}
+
+const Rentals = ({ accordion }: any) => {
   return (
     <div>
       <Head>
@@ -62,4 +48,4 @@ const Rental = () => {
   )
 }
 
-export default Rental
+export default Rentals

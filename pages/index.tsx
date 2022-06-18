@@ -1,68 +1,28 @@
 import Head from 'next/head'
+import path from 'path'
+import { promises as fs } from 'fs'
+import Accordion from '../components/Accordion'
+import Navbar from '../components/Navbar'
+import Banner from '../components/Banner'
+import Rental from './home-assets/rental.mdx'
+import Sales from './home-assets/sales.mdx'
+import Workshop from './home-assets/workshop.mdx'
+import Story from './home-assets/story.mdx'
+import Directions from './home-assets/directions.mdx'
 
-import Accordion from './components/Accordion'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import Rental from './home/rental.mdx'
-import Sales from './home/sales.mdx'
-import Workshop from './home/workshop.mdx'
-import Story from './home/story.mdx'
-import Directions from './home/directions.mdx'
-import { nanoid } from 'nanoid'
-import { Url } from 'url'
+export async function getStaticProps() {
+  const directory = path.join(process.cwd(), '/pages/home-assets')
 
-export default function Home() {
-  const accordion = [
-    {
-      header: 'Our Rental Program',
-      prompt: `Learn more about `,
-      linkRef: '/rentals/Rental',
-      linkTxt: 'how our program works',
-      bs: 'One',
-      id: 'Rentals',
+  const filePath = path.join(directory, 'homeData.json')
+  const accordion = await fs.readFile(filePath, 'utf8')
+  return {
+    props: {
+      accordion,
     },
-    {
-      header: 'The Sales Gallery',
+  }
+}
 
-      prompt: `Make an appointment to work with our on staff musicians `,
-      linkRef: '/sales/Sale',
-      linkTxt: 'to find your next instrument',
-
-      bs: 'Two',
-      id: 'Sales',
-    },
-    {
-      header: 'Workshop',
-
-      prompt: `Make an appointment `,
-      linkRef: '/workshop/Workshop',
-      linkTxt: 'to see our luthiers',
-
-      bs: 'Three',
-      id: 'Workshop',
-    },
-    {
-      header: 'Who We Are',
-
-      prompt: `Read more about our team `,
-      linkRef: '/story/Story',
-      linkTxt: 'here',
-
-      bs: 'Four',
-      id: 'Story',
-    },
-    {
-      header: 'Directions',
-
-      prompt: `Make an appointment `,
-      linkRef: '/directions/Direction',
-      linkTxt: 'to see our luthiers',
-
-      bs: 'Five',
-      id: 'Directions',
-    },
-  ]
-
+export default function Home({ accordion }: any) {
   return (
     <div>
       <Head>

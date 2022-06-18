@@ -1,0 +1,27 @@
+{
+  "how": {
+    "key": "1234",
+    "header": "How It Works",
+    "prompt": "Return to ",
+    "linkRef": "/",
+    "linkTxt": "home",
+    "bs": "One"
+  },
+
+  "why": {
+    "key": "2234",
+    "header": "Why Renting is in Your Best Intererst",
+    "prompt": "Return to ",
+    "linkRef": "/",
+    "linkTxt": "home",
+    "bs": "Two"
+  },
+  "for": {
+    "key": "3234",
+    "header": "Our Program Grows With You",
+    "prompt": "Return to ",
+    "linkRef": "/",
+    "linkTxt": "home",
+    "bs": "Three"
+  }
+}

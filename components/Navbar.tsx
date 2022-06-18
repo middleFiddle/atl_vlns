@@ -77,7 +77,7 @@ const Navbar = () => {
               />
             </a>
           </Link>
-          <div className=" dropdown d-flex justify-content-center">
+          <div className="w-25 dropdown d-flex justify-content-center">
             <button
               className="btn-sm btn-outline-dark dropdown-toggle"
               type="button"
