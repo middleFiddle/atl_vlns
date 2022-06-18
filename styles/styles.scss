@@ -4,3 +4,26 @@
   right: 0 !important;
   left: auto !important;
 }
+
+.mdxContainer {
+  line-height: 2em;
+}
+
+.sub {
+  padding-left: 16px;
+}
+
+summary {
+  cursor: pointer;
+  line-height: 2em;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.sub > summary {
+  font-size: large;
+}
+
+summary:hover {
+  font-weight: 800;
+}
