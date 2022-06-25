@@ -7,21 +7,20 @@
     "linkTxt": "how our program works",
     "bs": "One"
   },
-
   "sales": {
     "key": "2234",
     "header": "Sales",
-    "prompt": "Make an appointment to ",
+    "prompt": "",
     "linkRef": "/Sales",
-    "linkTxt": "work with our musicians",
+    "linkTxt": "",
     "bs": "Two"
   },
   "workshop": {
     "key": "3234",
-    "header": "Why Renting is in Your Best Intererst",
-    "prompt": "Make an appointment with  ",
+    "header": "Workshop",
+    "prompt": "",
     "linkRef": "/Workshop",
-    "linkTxt": "our luthiers",
+    "linkTxt": "",
     "bs": "Three"
   },
   "story": {
@@ -31,13 +30,5 @@
     "linkRef": "/Story",
     "linkTxt": "team",
     "bs": "Four"
-  },
-  "directions": {
-    "key": "3244",
-    "header": "Directions",
-    "prompt": "Find us",
-    "linkRef": "/Directions",
-    "linkTxt": "here",
-    "bs": "Five"
   }
 }

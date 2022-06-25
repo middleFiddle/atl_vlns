@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Accordion = ({ accordion, children }: any) => {
-  const items = Object.entries(JSON.parse(accordion))
+  const items: [string, any][] = Object.entries(JSON.parse(accordion))
 
   const [firstItem, ...otherItems] = items
   console.log(firstItem[0])
@@ -26,7 +26,7 @@ const Accordion = ({ accordion, children }: any) => {
         aria-labelledby={`heading${i[1].bs}`}
         data-bs-parent="#main"
       >
-        <section id={i[1].id} className="accordion-body">
+        <section id={i[1]} className="accordion-body">
           <div>{children[index + 1]}</div>
           <div>
             {i[1].prompt}
@@ -60,7 +60,7 @@ const Accordion = ({ accordion, children }: any) => {
           aria-labelledby="headingOne"
           data-bs-parent="#main"
         >
-          <section id={firstItem.id} className="accordion-body">
+          <section id={firstItem[1]} className="accordion-body">
             <div className="mdxContainer">{children[0]}</div>
 
             <> {firstItem[1].prompt}</>

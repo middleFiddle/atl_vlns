@@ -1,0 +1,18 @@
+{
+    "violin": {
+        "equity": 18,
+        "maintenance": 6
+    },
+    "viola": {
+        "equity": 27,
+        "maintenance": 6
+    },
+    "cello": {
+        "equity": 33,
+        "maintenance": 8
+    },
+    "bass": {
+        "equity": 67,
+        "maintenance": 9
+    }
+}

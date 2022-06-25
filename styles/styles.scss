@@ -1,5 +1,6 @@
 @import 'bootstrap/scss/bootstrap.scss';
 
+
 #dropdown-right.dropdown-menu {
   right: 0 !important;
   left: auto !important;
@@ -15,12 +16,21 @@
 
 summary {
   cursor: pointer;
-  line-height: 2em;
+
+  line-height: 1.25em;
   font-size: x-large;
   font-weight: 600;
+  list-style: circle;
+
+  margin: 1em;
 }
 
-.sub > summary {
+details[open]>summary {
+  list-style: disc;
+}
+
+
+.sub>summary {
   font-size: large;
 }
 

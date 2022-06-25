@@ -2,26 +2,25 @@
   "how": {
     "key": "1234",
     "header": "How It Works",
-    "prompt": "Return to ",
+    "prompt": "",
     "linkRef": "/",
-    "linkTxt": "home",
+    "linkTxt": "",
     "bs": "One"
   },
-
   "why": {
     "key": "2234",
-    "header": "Why Renting is in Your Best Intererst",
-    "prompt": "Return to ",
+    "header": "Why Renting is in Your Best Interest",
+    "prompt": "",
     "linkRef": "/",
-    "linkTxt": "home",
+    "linkTxt": "",
     "bs": "Two"
   },
   "for": {
     "key": "3234",
     "header": "Our Program Grows With You",
-    "prompt": "Return to ",
+    "prompt": "",
     "linkRef": "/",
-    "linkTxt": "home",
+    "linkTxt": "",
     "bs": "Three"
   }
 }

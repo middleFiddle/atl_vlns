@@ -1,16 +1,18 @@
 import React from 'react'
 import { NextPage } from 'next'
 
+
 type Props = {
-  txt: string
   href: string
+  children: any
+  action: string
 }
 
-const CallToAction: NextPage<Props> = ({ txt, href }) => {
+const CallToAction: NextPage<Props> = ({ children, href, action }) => {
   return (
-    <a className="btn btn-success mx-auto mb-5" href={href}>
-      {txt}
-    </a>
+
+    <a href={href} className="btn btn-lg btn-outline-primary mx-auto w-100" >{children}<span className="px-3 lead">{action}</span></a>
+
   )
 }
 

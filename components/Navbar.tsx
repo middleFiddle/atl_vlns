@@ -1,15 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import CallToAction from './CallToAction'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faMessage, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   return (
     <header>
-      <nav className="navbar bg-light ">
+      <nav className="navbar">
         <div className="container d-flex justify-content-around">
-          <div className="w-25 dropdown d-flex justify-content-center">
+          <div className="w-25 dropdown d-flex justify-content-center ">
             <button
-              className="btn-sm btn-outline-dark dropdown-toggle"
+              className="btn btn-sm btn-outline-dark dropdown-toggle lead"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -79,7 +82,7 @@ const Navbar = () => {
           </Link>
           <div className="w-25 dropdown d-flex justify-content-center">
             <button
-              className="btn-sm btn-outline-dark dropdown-toggle"
+              className="btn btn-sm btn-outline-dark dropdown-toggle lead"
               type="button"
               id="dropdownMenuButton2"
               data-bs-toggle="dropdown"
@@ -90,23 +93,32 @@ const Navbar = () => {
             </button>
             <div
               id="dropdown-right"
-              className="dropdown-menu"
+              className="dropdown-menu "
               aria-labelledby="dropdownMenuButton2"
             >
-              <button className="dropdown-item">
-                <a href="tel:7706428111">Call</a>
-              </button>
-              <button className="dropdown-item">
-                <a href="sms:7707389682">Text</a>
-              </button>
-              <button className="dropdown-item">
-                <a href="mailto:info@atlantaviolins.com">Email</a>
-              </button>
+              <div className="dropdown-item d-flex">
+                <CallToAction action="Call" href="tel:770-642-8111" >
+                  <FontAwesomeIcon icon={faPhone} />
+                </CallToAction>
+              </div>
+              <div className="dropdown-item d-flex ">
+                <CallToAction action="Text" href="sms:7707389682">
+                  <FontAwesomeIcon icon={faMessage} />
+                </CallToAction>
+              </div>
+              <div className="dropdown-item d-flex ">
+                <CallToAction action="Email" href="mailto:info@atlantaviolins.com">
+                  <FontAwesomeIcon icon={faPaperPlane} />
+                </CallToAction>
+              </div>
+
+
+
             </div>
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   )
 }
 

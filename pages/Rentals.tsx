@@ -3,6 +3,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import CallToAction from '../components/CallToAction'
 import Accordion from '../components/Accordion'
+import RentCalculator from '../components/RentCalculator'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
 import How from './rental-assets/how.mdx'
@@ -28,14 +29,14 @@ const Rentals = ({ accordion }: any) => {
         <title>Atlanta Violins</title>
         <meta name="viewport" content="width=device-width, initial-scale-=1" />
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
       <Navbar />
-      <main className="container d-flex flex-column justify-content-center fluid bg-light">
+      <main className="container d-flex flex-column justify-content-center fluid ">
         <Banner title="Our Rental Program" />
-        <CallToAction
-          txt="Start a Rental!"
-          href="https://online.atlantaviolins.com/aerntschoolselect.aspx"
-        ></CallToAction>
+        <RentCalculator></RentCalculator>
+        <CallToAction action="Start a Rental" href="https://online.atlantaviolins.com/aerntschoolselect.aspx"
+        ><></></CallToAction>
         <Accordion accordion={accordion}>
           <How />
           <Why />

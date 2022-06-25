@@ -9,7 +9,7 @@ type Props = {
 const Banner: NextPage<Props> = ({ title }) => {
   return (
     <div>
-      <h1 className="text-center">{title}</h1>
+      <h1 className="text-center display-4">{title}</h1>
       <div className="container fluid d-flex justify-content-center">
         <Image
           src="/theShop.png"

@@ -24,14 +24,14 @@ export async function getStaticProps() {
 
 export default function Home({ accordion }: any) {
   return (
-    <div>
+    <div className='bg-light vh-100'>
       <Head>
         <title>Atlanta Violins</title>
         <meta name="viewport" content="width=device-width, initial-scale-=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="container d-flex flex-column justify-content-center fluid bg-light">
+      <main className="container d-flex flex-column justify-content-center fluid ">
         <Banner title="Welcome to Our Shop" />
         <Accordion accordion={accordion}>
           <Rental />
@@ -42,7 +42,7 @@ export default function Home({ accordion }: any) {
         </Accordion>
       </main>
 
-      <footer></footer>
+
     </div>
   )
 }
