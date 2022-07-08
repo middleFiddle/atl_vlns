@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CallToAction from './CallToAction'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faMessage, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faMessage, faPaperPlane, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import MapModal from './mapModal'
 
 const Navbar = () => {
   return (
@@ -111,7 +112,9 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </CallToAction>
               </div>
-
+              <div className="dropdown-item d-flex ">
+                <MapModal />
+              </div>
 
 
             </div>
