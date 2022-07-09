@@ -10,9 +10,9 @@
   "sales": {
     "key": "2234",
     "header": "Sales",
-    "prompt": "",
+    "prompt": "Checkout ",
     "linkRef": "/Sales",
-    "linkTxt": "",
+    "linkTxt": " our gallery!",
     "bs": "Two"
   },
   "workshop": {
