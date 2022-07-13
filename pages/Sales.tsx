@@ -6,7 +6,7 @@ export async function getStaticProps() {
   const prisma = new PrismaClient()
   const instruments = await prisma.instruments.findMany({
     where: {
-      sold: "false"
+      is_sold: "false"
     }
   })
   return {
@@ -24,7 +24,8 @@ type InstrumentProps = {
   date_made: string
   image_path: string
   audio_path: string
-  sold: string
+  is_sold: string
+  is_setup: string
 }
 
 
@@ -47,9 +48,6 @@ const Sales: React.FC<{ instruments: InstrumentProps[] }> = ({ instruments }) =>
             </span>
             <span>
               {i.date_made}
-            </span>
-            <span>
-              {i.sold}
             </span>
           </div>
         </li>)}

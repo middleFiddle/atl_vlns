@@ -1,10 +1,12 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
 }
 
 model instruments {
@@ -17,5 +19,7 @@ model instruments {
   date_made   String? @db.VarChar(255)
   image_path  String? @db.VarChar(255)
   audio_path  String? @db.VarChar(255)
-  sold        String? @db.VarChar(255)
+  is_sold     String? @db.VarChar(255)
+  is_setup    String? @db.VarChar(255)
+
 }
