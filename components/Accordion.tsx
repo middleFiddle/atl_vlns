@@ -5,7 +5,7 @@ const Accordion = ({ accordion, children }: any) => {
   const items: [string, any][] = Object.entries(JSON.parse(accordion))
 
   const [firstItem, ...otherItems] = items
-  console.log(firstItem[0])
+
   const others = otherItems.map((i: any, index: number) => (
     <div key={i[1].key} className="accordion-item">
       <h2 className="accordion-header" id={`heading${i[1].bs}`}>
