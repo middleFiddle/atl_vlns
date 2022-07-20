@@ -1,27 +1,24 @@
-import React, { useState, useEffect, SetStateAction } from 'react'
+import { faSquarePersonConfined } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react'
 
 
-const RentCalculator = () => {
-    const [data, setData]: [any[], React.Dispatch<React.SetStateAction<[]>>] = useState([])
-    const [prices, setPrices]: [{}, React.Dispatch<React.SetStateAction<{}>>] = useState({
-        equity: '',
-        maintenance: ''
+type breakdown = {
+    equity: number,
+    maintenance: number
+}
+
+
+const RentCalculator = ({ priceSheet }) => {
+    console.log(priceSheet)
+    const [prices, setPrices]: [{}, React.Dispatch<React.SetStateAction<breakdown>>] = useState({
+        equity: 0,
+        maintenance: 0
     })
-    console.log(prices)
-    useEffect(() => {
-        fetch('./api/hello')
-            .then((res) => res.json())
-            .then((data) => {
-                setData(Object.entries<any>(data))
-            })
-    }, [])
 
-    console.log(data)
+
     const handleClick = (e) => {
-        const key = e.target.innerText
-        console.log(key.toLowerCase())
-        const breakdown = data.find((e) => e[0] === key.toLowerCase())
-        setPrices(breakdown[1])
+        const key: string = e.target.innerText.toLowerCase()
+        setPrices(priceSheet[key])
 
     }
     return (
@@ -41,7 +38,7 @@ const RentCalculator = () => {
 
             </div>
             <div className='container fluid pb-5 d-flex justify-content-center text-align-center'>
-                {prices.equity !== '' && <table className="table w-50">
+                {prices.equity !== 0 && <table className="table w-50">
                     <tbody>
                         <tr className='table-success'>
                             <th scope="row">Rental Equity</th>
