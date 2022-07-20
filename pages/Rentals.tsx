@@ -11,6 +11,7 @@ import How from './rental-assets/how.mdx'
 import Why from './rental-assets/why.mdx'
 import For from './rental-assets/for.mdx'
 
+
 export async function getStaticProps() {
   const directory = path.join(process.cwd(), '/pages/rental-assets')
   const filePath = path.join(directory, 'rentalData.json')
@@ -35,11 +36,6 @@ export async function getStaticProps() {
     }
   }
 
-
-
-
-
-
   return {
 
     props: {
@@ -51,6 +47,7 @@ export async function getStaticProps() {
 
 const Rentals = ({ accordion, prices }: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log(accordion)
+
   return (
     <div>
       <Head>

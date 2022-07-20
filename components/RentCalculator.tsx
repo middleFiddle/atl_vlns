@@ -1,24 +1,34 @@
-import { faSquarePersonConfined } from '@fortawesome/free-solid-svg-icons'
+
+import EventEmitter from 'events'
 import React, { useState } from 'react'
 
 
-type breakdown = {
+type Breakdown = {
     equity: number,
     maintenance: number
 }
 
+type PriceSheet = {
+    violin: Breakdown,
+    viola: Breakdown,
+    cello: Breakdown,
+    bass: Breakdown
+}
 
-const RentCalculator = ({ priceSheet }) => {
-    console.log(priceSheet)
-    const [prices, setPrices]: [{}, React.Dispatch<React.SetStateAction<breakdown>>] = useState({
+
+const RentCalculator = ({ priceSheet }: { priceSheet: PriceSheet }) => {
+
+    const [prices, setPrices]: [Breakdown, React.Dispatch<React.SetStateAction<Breakdown>>] = useState({
         equity: 0,
         maintenance: 0
     })
 
 
-    const handleClick = (e) => {
-        const key: string = e.target.innerText.toLowerCase()
-        setPrices(priceSheet[key])
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault()
+        e.stopPropagation()
+        const inst = e.target.name
+        setPrices(priceSheet[inst])
 
     }
     return (
@@ -29,10 +39,10 @@ const RentCalculator = ({ priceSheet }) => {
             <div className="container fluid p-1 d-flex flex-direction-column justify-content-center">
 
                 <div className="btn-group " role="group" aria-label="Pick an instrument">
-                    <button type="button" className="btn btn-outline-secondary" onClick={handleClick}>Violin</button>
-                    <button type="button" className="btn btn-outline-secondary" onClick={handleClick}>Viola</button>
-                    <button type="button" className="btn btn-outline-secondary" onClick={handleClick}>Cello</button>
-                    <button type="button" className="btn btn-outline-secondary" onClick={handleClick}>Bass</button>
+                    <button name="violin" type="button" className="btn btn-outline-secondary" onClick={handleClick}>Violin</button>
+                    <button name="viola" type="button" className="btn btn-outline-secondary" onClick={handleClick}>Viola</button>
+                    <button name="cello" type="button" className="btn btn-outline-secondary" onClick={handleClick}>Cello</button>
+                    <button name="bass" type="button" className="btn btn-outline-secondary" onClick={handleClick}>Bass</button>
                 </div>
 
 
