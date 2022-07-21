@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import { InferGetStaticPropsType } from 'next'
 
 export async function getStaticProps() {
   const prisma = new PrismaClient()
@@ -9,7 +10,7 @@ export async function getStaticProps() {
   }
 }
 
-const Sales = ({ instruments }) => {
+const Sales = ({ instruments }:InferGetStaticPropsType) => {
   return (
 
 
