@@ -6,7 +6,7 @@ const instrument = ({ instData }) => {
     return (
         <ul>
             {keys.map((k) => {
-                return <li>{`${k}: ${instData[k]}`}</li>
+                return <li key={k}>{`${k}: ${instData[k]}`}</li>
             })}
         </ul>
     )
