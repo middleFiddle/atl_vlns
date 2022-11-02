@@ -1,5 +1,9 @@
 @import "bootstrap/scss/bootstrap.scss";
 
+body {
+    background-color: rgba(240, 251, 255, 0.61);
+}
+
 #dropdown-right.dropdown-menu {
     right: 0 !important;
     left: auto !important;
@@ -38,4 +42,26 @@ summary:hover {
 
 .accordion-button {
     background-image: none;
+}
+
+#sales-bucket h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#sales-bucket a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#sales-bucket .card {
+    background-color: rgba(240, 248, 255, 0.466);
+    border-radius: 8px;
+}
+
+#sales-bucket .card:hover {
+    background-color: rgba(250, 215, 215, 0.116);
+    border-color: aliceblue;
 }
