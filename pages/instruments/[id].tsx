@@ -1,7 +1,11 @@
+import { instruments } from "@prisma/client"
+import { GetStaticPaths, InferGetStaticPropsType, GetStaticProps } from "next"
 import { GetAllIds } from "../../functions/GetAllIds"
 import { GetInstrument } from "../../functions/GetInstrument"
 
-const instrument = ({ instData }) => {
+// view
+
+const instrument = ({ instData }: InferGetStaticPropsType<GetStaticProps>) => {
     const keys = Object.keys(instData)
     return (
         <ul>
@@ -14,7 +18,9 @@ const instrument = ({ instData }) => {
 
 export default instrument
 
-export async function getStaticPaths() {
+// data
+
+export const getStaticPaths: GetStaticPaths = async () => {
     const paths = await GetAllIds()
     console.log(paths)
     return {
@@ -23,11 +29,11 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params }) {
-    const instData = await GetInstrument(Number(params.id))
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    const instData = params && (await GetInstrument(Number(params.id)))
     return {
         props: {
-            instData,
+            instData: instData,
         },
     }
 }
