@@ -1,39 +1,41 @@
-@import 'bootstrap/scss/bootstrap.scss';
-
+@import "bootstrap/scss/bootstrap.scss";
 
 #dropdown-right.dropdown-menu {
-  right: 0 !important;
-  left: auto !important;
+    right: 0 !important;
+    left: auto !important;
 }
 
 .mdxContainer {
-  line-height: 2em;
+    line-height: 2em;
 }
 
 .sub {
-  padding-left: 16px;
+    padding-left: 16px;
 }
 
 summary {
-  cursor: pointer;
+    cursor: pointer;
 
-  line-height: 1.25em;
-  font-size: x-large;
-  font-weight: 600;
-  list-style: circle;
+    line-height: 1.25em;
+    font-size: x-large;
+    font-weight: 600;
+    list-style: circle;
 
-  margin: 1em;
+    margin: 1em;
 }
 
-details[open]>summary {
-  list-style: disc;
+details[open] > summary {
+    list-style: disc;
 }
 
-
-.sub>summary {
-  font-size: large;
+.sub > summary {
+    font-size: large;
 }
 
 summary:hover {
-  font-weight: 800;
+    font-weight: 800;
+}
+
+.accordion-button {
+    background-image: none;
 }
