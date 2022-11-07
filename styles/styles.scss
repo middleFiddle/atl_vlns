@@ -46,9 +46,28 @@ summary:hover {
 
 #sales-bucket h1,
 h2,
-h3 {
+h5,
+p,
+a {
     margin: 0;
     padding: 0;
+}
+
+#sales-bucket h1,
+h2 {
+    font-weight: 300;
+}
+
+#sales-bucket p {
+    font-weight: 100;
+    letter-spacing: 0.16rem;
+    line-height: 1.75rem;
+}
+
+#sales-bucket h5 {
+    font-weight: 100;
+    font-style: italic;
+    text-indent: -0.16em;
 }
 
 #sales-bucket a {
@@ -57,11 +76,14 @@ h3 {
 }
 
 #sales-bucket .card {
-    background-color: rgba(240, 248, 255, 0.466);
     border-radius: 8px;
 }
 
 #sales-bucket .card:hover {
-    background-color: rgba(250, 215, 215, 0.116);
-    border-color: aliceblue;
+    background-color: rgba(252, 252, 252, 0.849);
+    border-color: rgb(204, 231, 255);
+}
+
+.blur {
+    filter: blur(0.2rem);
 }
