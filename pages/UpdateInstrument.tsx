@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
+import { useSession, getSession } from "next-auth/react"
 
 const UpdateInstrument = () => {
+    const { data } = useSession()
     const [id, setId] = useState("")
     const [path, setPath] = useState("")
     const [submit, setSubmit] = useState(false)
+
+    console.log(data)
 
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
         setSubmit((prev) => !prev)
@@ -29,7 +33,7 @@ const UpdateInstrument = () => {
         } catch (error) {
             console.log(error)
         }
-    }, [submit])
+    }, [submit, id, path])
 
     const handleId: React.ChangeEventHandler<HTMLInputElement> = (e) => {
         setId(e.target.value)
@@ -37,15 +41,20 @@ const UpdateInstrument = () => {
     const handlePath: React.ChangeEventHandler<HTMLInputElement> = (e) => {
         setPath(e.target.value)
     }
-    return (
-        <form onSubmit={handleSubmit}>
-            <label>instrument id</label>
-            <input type="text" value={id} onChange={handleId} />
-            <label>new image path</label>
-            <input type="text" value={path} onChange={handlePath} />
-            <input type="submit" value="Update Image Path" />
-        </form>
-    )
+
+    const Form = () => {
+        return (
+            <form onSubmit={handleSubmit}>
+                <label>instrument id</label>
+                <input type="text" value={id} onChange={handleId} />
+                <label>new image path</label>
+                <input type="text" value={path} onChange={handlePath} />
+                <input type="submit" value="Update Image Path" />
+            </form>
+        )
+    }
+
+    data ? <Form /> : <p>nononononononononononon</p>
 }
 
 export default UpdateInstrument
